@@ -1,16 +1,15 @@
-# Multilingual Machine Translation with Large Language Models: Empirical Results and Analysis
----
-## Requirement
+## Multilingual Machine Translation with Large Language Models: Empirical Results and Analysis
+### Requirement
 Our code is based on [OpenICL](https://arxiv.org/abs/2303.02913) framework.
 More details and guidance can be found in this repository: https://github.com/Shark-NLP/OpenICL.
 
-## Evaluation 
+### Evaluation 
 
-### Dataset
+#### Dataset
 We evaluate large language model's multilingual translation abilities on Flores-101 dataset, which can be downloaded with this [link](https://github.com/facebookresearch/flores/blob/main/previous_releases/flores101/README.md).
 
-### Scripts
-Below is our evaluation scripts.
+#### Scripts
+Below is our evaluation script.
 ```shell
 python test/test_flores101.py \
   --lang_pair deu-eng \
@@ -24,7 +23,7 @@ python test/test_flores101.py \
   --seed 43  
 ```
 
-# Citation
+### Citation
 If you find this repository helpful, feel free to cite our paper:
 ```bibtex
 @misc{zhu2023multilingual,
