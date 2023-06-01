@@ -12,16 +12,16 @@ import itertools
 
 from openicl import IclDatasetReader
 from openicl.icl_retriever import *
-from openicl import IclPromptTemplate, IclGenInferencer, IclGenInferencerForMultiRetriever
+from openicl import IclPromptTemplate, IclGenInferencer, IclGenInferencer
 from datasets import load_dataset, Dataset, DatasetDict
 
-from .config import dataset_dir
+from config import dataset_dir
 
 def load_dataset(src_lang, tgt_lang, args):
     valid_src = [line.strip() for line in open(join(dataset_dir, 'dev/{}.dev'.format(src_lang))).readlines()]
     valid_tgt = [line.strip() for line in open(join(dataset_dir, 'dev/{}.dev'.format(tgt_lang))).readlines()]
-    test_src = [line.strip() for line in open(join(dataset_dir, 'devtest/{}.devtest.first100'.format(src_lang))).readlines()]
-    test_tgt = [line.strip() for line in open(join(dataset_dir, 'devtest/{}.devtest.first100'.format(tgt_lang))).readlines()]
+    test_src = [line.strip() for line in open(join(dataset_dir, 'devtest-first100/{}.devtest.first100'.format(src_lang))).readlines()]
+    test_tgt = [line.strip() for line in open(join(dataset_dir, 'devtest-first100/{}.devtest.first100'.format(tgt_lang))).readlines()]
     if args.disorder:
         random.seed(args.seed)
         random.shuffle(valid_tgt)
@@ -46,7 +46,6 @@ def get_rtr(src, tgt, args):
         ctx_token_dict={src: "</X>", tgt: "</Y>"},
         ice_token="</E>"
     )
-    retriever = get_retriever(args.retriever)
     if args.retriever == "random":
         rtr = IclRandomRetriever(dr, ice_template=tp, ice_num=args.ice_num, select_split="dev", generation_split="devtest", seed=args.seed)
     elif args.retriever == "bm25":

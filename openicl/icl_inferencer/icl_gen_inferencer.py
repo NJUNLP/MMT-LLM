@@ -9,7 +9,7 @@ from openicl.icl_retriever import *
 from openicl.icl_evaluator import *
 from openicl.icl_inferencer import IclBaseInferencer
 from openicl.utils.api_service import * 
-from typing import List, Union, Optional
+from typing import List, Union, Optional, Callable
 from tqdm import tqdm
 from torch.utils.data import DataLoader
 from transformers import PretrainedConfig

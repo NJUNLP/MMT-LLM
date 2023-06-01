@@ -14,13 +14,13 @@ Below is our evaluation script.
 python test/test_flores101.py \
   --lang_pair deu-eng \
   --retriever random \
-  --ice_num 8 \ 
+  --ice_num 8 \
   --prompt_template "</E></X>=</Y>" \
   --model_name your-model-name 
   --tokenizer_name your-tokenizer-name \
   --output_dir your-output-path \
   --output_file your-output-file \
-  --seed 43  
+  --seed 43
 ```
 
 ### Citation

@@ -1,4 +1,4 @@
-dataset_dir = "../data/flores101_dataset/"
+dataset_dir = "./data/flores101_dataset/"
 
 lang_config = ['afr', 'amh', 'ara', 'hye', 'asm', 'ast', 'azj', 'bel', 'ben', 'bos', 'bul', 'mya', 'cat', 'ceb', 'zho_simpl', 'zho_trad', 'hrv', 'ces', 'dan', 'nld', 'eng', 'est', 'tgl', 'fin', 'fra', 'ful', 'glg', 'lug', 'kat', 'deu', 'ell', 'guj', 'hau', 'heb', 'hin', 'hun', 'isl', 'ibo', 'ind', 'gle', 'ita', 'jpn', 'jav', 'kea', 'kam', 'kan', 'kaz', 'khm', 'kor', 'kir', 'lao', 'lav', 'lin', 'lit', 'luo', 'ltz', 'mkd', 'msa', 'mal', 'mlt', 'mri', 'mar', 'mon', 'npi', 'nso', 'nob', 'nya', 'oci', 'ory', 'orm', 'pus', 'fas', 'pol', 'por', 'pan', 'ron', 'rus', 'srp', 'sna', 'snd', 'slk', 'slv', 'som', 'ckb', 'spa', 'swh', 'swe', 'tgk', 'tam', 'tel', 'tha', 'tur', 'ukr', 'umb', 'urd', 'uzb', 'vie', 'cym', 'wol', 'xho', 'yor', 'zul']
 ISO_639_2_T_abbr2full = {

@@ -4,3 +4,9 @@
 # Byte-compiled
 __pycache__/
 .cache/
+
+# Dataset
+data/
+
+# Runing script
+run.sh
