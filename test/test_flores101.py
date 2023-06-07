@@ -9,6 +9,7 @@ from typing import List, Union, Optional
 from copy import deepcopy
 import numpy as np
 import itertools
+import random
 
 from openicl import IclDatasetReader
 from openicl.icl_retriever import *
@@ -73,7 +74,7 @@ def test_flores(args):
         rtrs = [get_rtr(src, tgt, args), get_rtr(tgt, src, args)]
         rtr_order = args.direction_order
     elif args.cross_lang:
-        rtrs = [rtr]
+        rtrs = [get_rtr(src, tgt, args)]
         for lang in args.ex_lang:
             rtrs.append(get_rtr(lang, tgt, args))
         rtr_order = args.lang_order
