@@ -3,6 +3,13 @@
 Our code is based on [OpenICL](https://arxiv.org/abs/2303.02913) framework.
 More details and guidance can be found in this repository: https://github.com/Shark-NLP/OpenICL.
 
+**Install SPM-BLEU**
+```bash
+git clone --single-branch --branch adding_spm_tokenized_bleu https://github.com/ngoyal2707/sacrebleu.git
+cd sacrebleu
+python setup.py install
+```
+
 ### Evaluation 
 
 #### Dataset

@@ -82,7 +82,7 @@ class IclGenInferencer(IclBaseInferencer):
         prompt_list = []
         ice_idx_list = [rtr.retrieve() for rtr in self.retriever_list]
         ice_nums = []
-        for idx, ice_idx in enumerate(tqdm(ice_idx_list)):
+        for idx in tqdm(range(len(ice_idx_list[0]))):
             ice_idx, rtr = [], []
             for i, rtr_id in enumerate(self.rtr_order):
                 ice_idx.append(ice_idx_list[rtr_id][idx][i])
